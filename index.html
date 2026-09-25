@@ -1,0 +1,1454 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Synergy Media-Ads | Meta Ads for E-Commerce Growth</title>
+<meta name="description" content="Synergy Media-Ads scales high-growth Shopify stores via scientific Meta Ads, server-side CAPI tracking, creative velocity, and account resilience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #13233C;
+  --navy-deep: #0B1524;
+  --navy-light: #1A2F4E;
+  --red: #C81E2B;
+  --red-hover: #A71622;
+  --red-soft: #FFF1F2;
+  --bg: #F8FAFC;
+  --white: #FFFFFF;
+  --text: #0F172A;
+  --muted: #64748B;
+  --line: #E2E8F0;
+  --line-dark: rgba(255,255,255,0.12);
+  --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 12px 32px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 24px 60px rgba(11, 21, 36, 0.16);
+  --radius: 20px;
+  --radius-sm: 12px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; height: auto; display: block; }
+.container { width: min(1180px, 92%); margin: auto; }
+
+/* NAVBAR */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line);
+}
+.navin {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: 18px;
+  color: var(--navy);
+}
+.brand-logo-img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+.brand-icon-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--navy);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+.brand-icon-mark span { color: var(--red); }
+.brand-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--navy);
+  white-space: nowrap;
+}
+.links {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted);
+}
+.links a:hover { color: var(--red); }
+
+/* BUTTONS */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 14px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.btn-red {
+  background: var(--red);
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(200, 30, 43, 0.25);
+}
+.btn-red:hover {
+  background: var(--red-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(200, 30, 43, 0.35);
+}
+.btn-outline {
+  border-color: var(--line);
+  background: #fff;
+  color: var(--navy);
+}
+.btn-outline:hover {
+  border-color: var(--navy);
+  transform: translateY(-2px);
+}
+.btn-dark {
+  background: var(--navy);
+  color: #fff;
+}
+.btn-dark:hover {
+  background: var(--navy-deep);
+  transform: translateY(-2px);
+}
+
+/* HERO */
+.hero {
+  padding: 80px 0 70px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 50px;
+  align-items: center;
+}
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 16px;
+  background: var(--red-soft);
+  padding: 6px 14px;
+  border-radius: 30px;
+}
+h1 {
+  font-size: clamp(40px, 5.2vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 20px;
+}
+h1 em {
+  font-style: normal;
+  color: var(--red);
+}
+.lead {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 580px;
+  margin-bottom: 32px;
+  line-height: 1.65;
+}
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.trust-bullets {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+.trust-bullets b { color: var(--navy); }
+
+/* HERO LIVE CARD */
+.hero-card {
+  background: var(--navy);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 34px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255,255,255,0.08);
+  position: relative;
+}
+.hero-card-badge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line-dark);
+  margin-bottom: 20px;
+}
+.hero-card-badge span {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  color: #94A3B8;
+}
+.live-signal {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #10B981;
+  font-weight: 700;
+}
+.live-dot {
+  width: 8px;
+  height: 8px;
+  background: #10B981;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #10B981;
+}
+.hero-card h3 {
+  font-size: 22px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.hero-stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+.hero-stat-box {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+}
+.hero-stat-box small {
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #94A3B8;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+.hero-stat-box strong {
+  display: block;
+  font-size: 26px;
+  font-weight: 800;
+  font-family: 'Space Grotesk', sans-serif;
+}
+.hero-stat-box span.green {
+  font-size: 11px;
+  color: #34D399;
+  font-weight: 700;
+}
+.hero-card-footer {
+  background: rgba(255,255,255,0.03);
+  border: 1px dashed var(--line-dark);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  font-size: 12px;
+  color: #CBD5E1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* METRICS STRIP */
+.strip {
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--line);
+  padding: 36px 0;
+}
+.strip-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+.strip-item h4 {
+  font-size: 34px;
+  font-weight: 800;
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+.strip-item p {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+
+/* SECTION HEADERS */
+section { padding: 90px 0; }
+.section-head {
+  max-width: 700px;
+  margin-bottom: 48px;
+}
+.section-head h2 {
+  font-size: clamp(30px, 3.8vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  font-weight: 800;
+  color: var(--navy);
+  margin: 10px 0 14px;
+}
+.section-head p {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+.section-head.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* SOCIAL PROOF & SCREENSHOTS GRID */
+.proof-section {
+  background: #FFFFFF;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.proof-card {
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+}
+.proof-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: #CBD5E1;
+}
+.proof-badge-bar {
+  padding: 10px 18px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #F1F5F9;
+  color: var(--navy);
+  border-bottom: 1px solid var(--line);
+}
+.proof-badge-bar.red { background: var(--red-soft); color: var(--red); }
+.proof-badge-bar.green { background: #ECFDF5; color: #047857; }
+.proof-media {
+  background: #0B1524;
+  height: 220px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+.proof-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.proof-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+.proof-body h4 {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.proof-body p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.55;
+  margin-bottom: 18px;
+}
+.proof-stats-strip {
+  display: flex;
+  gap: 18px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--line);
+}
+.proof-stat-item strong {
+  display: block;
+  font-size: 18px;
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--navy);
+}
+.proof-stat-item span {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+/* SYSTEM: 6-STEP PROCESS */
+.system-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.system-card {
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s;
+}
+.system-card:hover {
+  border-color: #CBD5E1;
+  box-shadow: var(--shadow-md);
+}
+.system-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--red);
+  margin-bottom: 14px;
+}
+.system-card h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+.system-card p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* SERVICES: DARK SECTION */
+.dark-section {
+  background: var(--navy);
+  color: #FFFFFF;
+}
+.dark-section .section-head h2 { color: #FFFFFF; }
+.dark-section .section-head p { color: #94A3B8; }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.service-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius);
+  padding: 32px;
+}
+.service-icon {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.service-card h3 {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 14px;
+  color: #FFFFFF;
+}
+.service-card ul {
+  list-style: none;
+}
+.service-card li {
+  font-size: 13px;
+  color: #CBD5E1;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.service-card li:last-child { border-bottom: none; }
+.service-card li::before {
+  content: "✓";
+  color: var(--red);
+  font-weight: 800;
+}
+
+/* ABOUT SECTION */
+.about-wrap {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 40px;
+  align-items: center;
+}
+.about-card {
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 40px 30px;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+.about-brand-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.about-card h3 {
+  color: var(--navy);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.about-card p {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
+.about-copy p {
+  margin-bottom: 16px;
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* PRICING */
+.pricing-section {
+  background: var(--bg);
+}
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  align-items: stretch;
+}
+.price-card {
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  transition: transform 0.2s;
+}
+.price-card:hover {
+  transform: translateY(-4px);
+}
+.price-card.featured {
+  background: var(--navy);
+  color: #FFFFFF;
+  border-color: var(--navy);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-10px);
+}
+.price-card.custom-tier {
+  background: var(--red);
+  color: #FFFFFF;
+  border-color: var(--red);
+}
+.price-tag {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--red);
+  margin-bottom: 8px;
+}
+.price-card.featured .price-tag { color: #FF94A0; }
+.price-card.custom-tier .price-tag { color: #FFE4E6; }
+.price-card h3 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.price-amount {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  margin: 12px 0 4px;
+}
+.price-period {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 22px;
+}
+.price-card.featured .price-period { color: #94A3B8; }
+.price-card.custom-tier .price-period { color: #FEE2E2; }
+.price-features {
+  list-style: none;
+  flex: 1;
+  margin-bottom: 28px;
+}
+.price-features li {
+  font-size: 12px;
+  padding: 7px 0;
+  color: #475569;
+  border-bottom: 1px solid #F1F5F9;
+  display: flex;
+  gap: 8px;
+}
+.price-card.featured .price-features li {
+  color: #CBD5E1;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.price-card.custom-tier .price-features li {
+  color: #FFF;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+.price-features li::before {
+  content: "•";
+  color: var(--red);
+  font-weight: 800;
+}
+.price-card.featured .price-features li::before,
+.price-card.custom-tier .price-features li::before {
+  color: #FFF;
+}
+.price-disclaimer {
+  text-align: center;
+  margin-top: 32px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* FAQ SECTION */
+.faq-grid {
+  display: grid;
+  gap: 14px;
+  max-width: 850px;
+  margin: auto;
+}
+.faq-item {
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.faq-item summary {
+  padding: 20px 24px;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--navy);
+  cursor: pointer;
+}
+.faq-item p {
+  padding: 0 24px 20px;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* CTA BOOKING BLOCK */
+.cta-block {
+  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
+  border-radius: var(--radius);
+  padding: 60px;
+  color: #FFFFFF;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+  box-shadow: var(--shadow-lg);
+}
+.cta-block h2 {
+  font-size: clamp(32px, 3.6vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+  margin: 10px 0 16px;
+}
+.cta-block p {
+  color: #94A3B8;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.cta-form-box {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius-sm);
+  padding: 30px;
+  text-align: center;
+}
+.cta-form-box h4 {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.cta-form-box p {
+  font-size: 12px;
+  color: #94A3B8;
+  margin-bottom: 22px;
+}
+
+/* FOOTER */
+footer {
+  background: var(--navy-deep);
+  color: #94A3B8;
+  padding: 60px 0 36px;
+  border-top: 1px solid var(--line-dark);
+  font-size: 13px;
+}
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 36px;
+  border-bottom: 1px solid var(--line-dark);
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.footer-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.footer-links a {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: #FFF; }
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 12px;
+}
+.footer-address { color: #64748B; }
+.social-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+.social-links a {
+  color: #CBD5E1;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+.social-links a:hover { color: #FFF; }
+
+/* MODALS */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(11, 21, 36, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 100000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal.active { display: flex !important; }
+.modal-content {
+  background: #FFFFFF;
+  border-radius: var(--radius);
+  max-width: 720px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 40px;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+  color: var(--text);
+}
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #F1F5F9;
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-weight: 800;
+  cursor: pointer;
+  color: var(--navy);
+  font-size: 16px;
+  display: grid;
+  place-items: center;
+}
+.modal-close:hover { background: #E2E8F0; }
+.modal-content h3 { font-size: 22px; font-weight: 800; margin-bottom: 14px; color: var(--navy); }
+.modal-content h4 { font-size: 15px; font-weight: 700; margin: 18px 0 8px; color: var(--navy); }
+.modal-content p, .modal-content ul { font-size: 13.5px; color: var(--muted); margin-bottom: 12px; line-height: 1.65; }
+.modal-content ul { padding-left: 20px; }
+
+/* COOKIE BANNER */
+.cookie-banner {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  max-width: 520px;
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px 22px;
+  box-shadow: var(--shadow-lg);
+  z-index: 99999;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.cookie-banner p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.5;
+}
+.cookie-banner button {
+  background: var(--navy);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 16px;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+  .hero-grid, .cta-block, .about-wrap { grid-template-columns: 1fr; }
+  .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+  .proof-grid { grid-template-columns: 1fr; }
+  .strip-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  section { padding: 60px 0; }
+  .navin .links { display: none; }
+  .services-grid, .system-grid { grid-template-columns: 1fr; }
+  .pricing-grid { grid-template-columns: 1fr; }
+  .price-card.featured { transform: none; }
+  .cta-block { padding: 34px 24px; }
+  .footer-top, .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .cookie-banner { flex-direction: column; align-items: flex-start; }
+  .cookie-banner button { width: 100%; margin-top: 8px; }
+}
+</style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="container navin">
+      <a class="brand" href="#">
+        <img src="synergy-media-logo.png" alt="Synergy Media-Ads Logo" class="brand-logo-img" onerror="this.style.display='none'; document.getElementById('navBrandFallback').style.display='grid';">
+        <div class="brand-icon-mark" id="navBrandFallback" style="display:none;">S<span>M</span></div>
+        <span class="brand-text">Synergy Media-Ads</span>
+      </a>
+      <div class="links">
+        <a href="#proof">Proven Results</a>
+        <a href="#system">The System</a>
+        <a href="#services">Capabilities</a>
+        <a href="#about">About</a>
+        <a href="#pricing">Investment</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-red" href="https://synergymedia-ads.zohobookings.com/synergymedia-ads" target="_blank" rel="noopener">Book Free Audit 🚀</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="kicker">Meta Ads Revenue Acceleration Engine</div>
+        <h1>Scaling E-Commerce Brands via <em>Scientific Meta Ads</em>.</h1>
+        <p class="lead">We build, manage, and scale high-ROAS Meta advertising systems for Shopify stores. Driven by server-side CAPI signal, high-velocity creative testing, and robust account protection.</p>
+        <div class="hero-actions">
+          <a class="btn btn-red" href="https://synergymedia-ads.zohobookings.com/synergymedia-ads" target="_blank" rel="noopener">Claim Free 30-Min Audit 🚀</a>
+          <a class="btn btn-outline" href="#pricing">View Growth Tiers</a>
+        </div>
+        <div class="trust-bullets">
+          <span><b>01</b> 100% CAPI Signal Resilience</span>
+          <span><b>02</b> Creative Velocity Testing</span>
+          <span><b>03</b> Account Unban &amp; BM Protection</span>
+        </div>
+      </div>
+
+      <!-- LIVE DASHBOARD METRIC CARD -->
+      <div class="hero-card">
+        <div class="hero-card-badge">
+          <span>Synergy Performance Radar</span>
+          <div class="live-signal"><div class="live-dot"></div> Live CAPI Signal</div>
+        </div>
+        <h3>Scaling Shopify stores past 7-figures predictably — not just generating clicks.</h3>
+        <div class="hero-stat-grid">
+          <div class="hero-stat-box">
+            <small>Attributed ROAS</small>
+            <strong>4.62x</strong>
+            <span class="green">↑ +42% vs baseline</span>
+          </div>
+          <div class="hero-stat-box">
+            <small>Lead / Action Cost</small>
+            <strong>$0.13</strong>
+            <span class="green">Ultra-Low CPA</span>
+          </div>
+        </div>
+        <div class="hero-card-footer">
+          <span>🛡️</span>
+          <span><b>Business Manager Resilience:</b> Active protection against ad account restrictions.</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- METRICS STRIP -->
+  <div class="strip">
+    <div class="container strip-grid">
+      <div class="strip-item">
+        <h4>4.62x</h4>
+        <p>Peak Client ROAS</p>
+      </div>
+      <div class="strip-item">
+        <h4>$0.13</h4>
+        <p>Cost Per Acquisition Record</p>
+      </div>
+      <div class="strip-item">
+        <h4>100%</h4>
+        <p>CAPI Server-Side Signal</p>
+      </div>
+      <div class="strip-item">
+        <h4>&lt;48 hrs</h4>
+        <p>Average Account Recovery Time</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROVEN RESULTS & REAL CHAT EVIDENCE -->
+  <section id="proof" class="proof-section">
+    <div class="container">
+      <div class="section-head center">
+        <div class="kicker">Data-Backed Proof</div>
+        <h2>Real Performance. Real Account Protection.</h2>
+        <p>Inspect our live Meta Ad Manager metrics and client confirmation chats. We deliver measurable profitability while safeguarding your ad assets.</p>
+      </div>
+
+      <div class="proof-grid">
+        
+        <!-- PROOF CARD 1: ROAS TABLE -->
+        <div class="proof-card">
+          <div class="proof-badge-bar green">📈 4.62x ROAS Scaling</div>
+          <div class="proof-media">
+            <img src="proof-roas-table.png" alt="Meta Ads Manager 4.62x ROAS Performance">
+          </div>
+          <div class="proof-body">
+            <div>
+              <h4>Sub-€3 CPMs &amp; 4.62x Purchase ROAS</h4>
+              <p>Achieved exceptional acquisition efficiency on DTC e-commerce campaigns, holding click costs at €0.08 with high conversion volume.</p>
+            </div>
+            <div class="proof-stats-strip">
+              <div class="proof-stat-item"><strong>4.62x</strong><span>Top ROAS</span></div>
+              <div class="proof-stat-item"><strong>€0.08</strong><span>CPC (All)</span></div>
+              <div class="proof-stat-item"><strong>€2.48</strong><span>Avg CPM</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROOF CARD 2: LOW CPA CONVERSIONS -->
+        <div class="proof-card">
+          <div class="proof-badge-bar red">⚡ $0.13 Lead Acquisition</div>
+          <div class="proof-media">
+            <img src="proof-low-cost-conversions.jpg" alt="159 Conversions at $0.13 each">
+          </div>
+          <div class="proof-body">
+            <div>
+              <h4>159 Conversations at $0.13 Each</h4>
+              <p>High-velocity creative testing campaign delivering 159 high-intent customer conversations on just $21.13 total spend.</p>
+            </div>
+            <div class="proof-stats-strip">
+              <div class="proof-stat-item"><strong>159</strong><span>Actions</span></div>
+              <div class="proof-stat-item"><strong>$0.13</strong><span>Cost / Action</span></div>
+              <div class="proof-stat-item"><strong>$21.13</strong><span>Total Spend</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROOF CARD 3: UNBAN CHAT -->
+        <div class="proof-card">
+          <div class="proof-badge-bar">🛡️ Account Recovery</div>
+          <div class="proof-media">
+            <img src="proof-chat-unban.jpg" alt="WhatsApp client confirmation unbanning Meta Business Manager">
+          </div>
+          <div class="proof-body">
+            <div>
+              <h4>Restricted BM &amp; Ad Account Restored</h4>
+              <p>"Ad Account is back! Thank you!!!" — Solved severe Meta compliance restrictions in under 48 hours to get campaigns scaling again.</p>
+            </div>
+            <div class="proof-stats-strip">
+              <div class="proof-stat-item"><strong>&lt;48h</strong><span>Turnaround</span></div>
+              <div class="proof-stat-item"><strong>100%</strong><span>Restored</span></div>
+              <div class="proof-stat-item"><strong>Verified</strong><span>Client Chat</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- THE SYSTEM: 6 STEPS -->
+  <section id="system">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">The Operating Framework</div>
+        <h2>The Synergy Media Performance System™</h2>
+        <p>We treat your Meta account as an institutional growth asset: deep research, precise architecture, relentless testing, and data-backed scaling.</p>
+      </div>
+
+      <div class="system-grid">
+        <div class="system-card">
+          <div class="system-num">01 / RESEARCH</div>
+          <h3>Product &amp; Avatar Teardown</h3>
+          <p>Exhaustive unit economic audits, competitor angle mapping, and customer psychological trigger identification.</p>
+        </div>
+        <div class="system-card">
+          <div class="system-num">02 / STRATEGY</div>
+          <h3>Full-Funnel Architecture</h3>
+          <p>Structured CBO scaling setups, dynamic product retargeting, and server-side CAPI pixel implementation.</p>
+        </div>
+        <div class="system-card">
+          <div class="system-num">03 / EXECUTION</div>
+          <h3>Creative Velocity &amp; Hooks</h3>
+          <p>High-tempo testing of 5–8 new hooks, video UGC concepts, and static messaging angles launched weekly.</p>
+        </div>
+        <div class="system-card">
+          <div class="system-num">04 / OPTIMIZATION</div>
+          <h3>Daily CPA Engineering</h3>
+          <p>Scientific budget reallocation cutting fatigued ads quickly and funnelling capital to winning ad sets.</p>
+        </div>
+        <div class="system-card">
+          <div class="system-num">05 / SCALING</div>
+          <h3>Predictable Budget Expansion</h3>
+          <p>Aggressive scaling through Advantage+ Shopping Campaigns (ASC) without destabilizing baseline ROAS.</p>
+        </div>
+        <div class="system-card">
+          <div class="system-num">06 / INTELLIGENCE</div>
+          <h3>Executive Business Insights</h3>
+          <p>Turning attribution data into product inventory decisions, margin forecasting, and weekly Loom reports.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITIES: DARK SECTION -->
+  <section id="services" class="dark-section">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker" style="background: rgba(200,30,43,0.2); color: #FF8F9A;">Our Capabilities</div>
+        <h2>Everything Required to Dominate Meta Ads in 2026.</h2>
+        <p>A completely integrated growth partnership covering media buying, creative strategy, tracking, and risk management.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">📈</div>
+          <h3>Growth Strategy &amp; Funnels</h3>
+          <ul>
+            <li>Unit economics &amp; break-even ROAS modeling</li>
+            <li>Customer avatar &amp; angle discovery</li>
+            <li>Competitor creative teardowns</li>
+            <li>Shopify landing page conversion consultation</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⚡</div>
+          <h3>Media Buying &amp; Scaling</h3>
+          <ul>
+            <li>Advantage+ Shopping Campaign (ASC) mastery</li>
+            <li>Daily bid, budget, and CPA optimization</li>
+            <li>Horizontal &amp; vertical budget scaling</li>
+            <li>Audience exclusion &amp; retention funnels</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🛡️</div>
+          <h3>Tracking &amp; Signal Resilience</h3>
+          <ul>
+            <li>Meta Conversions API (CAPI) server-side setup</li>
+            <li>First-party cookie signal recovery (post-iOS 14.5)</li>
+            <li>Real-time Looker Studio dashboard delivery</li>
+            <li>Account unban &amp; compliance mitigation</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎯</div>
+          <h3>Creative Strategy &amp; Testing</h3>
+          <ul>
+            <li>Weekly A/B hook &amp; copy variation testing</li>
+            <li>UGC scriptwriting &amp; creator briefs</li>
+            <li>High-converting static ad designs</li>
+            <li>Ad fatigue monitoring &amp; rapid refreshes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" style="background:#FFFFFF; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">About Synergy Media-Ads</div>
+        <h2>A Dedicated Partner for E-Commerce Revenue Growth</h2>
+      </div>
+      <div class="about-wrap">
+        <div class="about-card">
+          <div class="about-brand-wrap">
+            <img src="synergy-media-logo.png" alt="Synergy Media-Ads Logo" class="brand-logo-img" style="height:48px;" onerror="this.style.display='none'; document.getElementById('aboutBrandFallback').style.display='grid';">
+            <div class="brand-icon-mark" id="aboutBrandFallback" style="display:none; width:54px; height:54px; font-size:18px; border-radius:14px;">S<span>M</span></div>
+            <h3>Synergy Media-Ads</h3>
+          </div>
+          <p>Scientific Performance Marketing Agency</p>
+        </div>
+        <div class="about-copy">
+          <p>Synergy Media-Ads partners with modern DTC brands and high-growth Shopify stores to build, manage, and scale predictable Meta advertising systems. Our methodology seamlessly connects campaign architecture, high-velocity creative testing, server-side attribution, and commercial unit economics.</p>
+          <p>We work with total transparency: you own 100% of your ad accounts, creative assets, and data. Every strategy is engineered to cut customer acquisition costs (CPA) and unlock sustainable enterprise value.</p>
+          <p><strong>Founder:</strong> Pharès Adam · <a href="mailto:info@synergymedia-ads.com" style="color:var(--red); font-weight:700;">info@synergymedia-ads.com</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING SECTION -->
+  <section id="pricing" class="pricing-section">
+    <div class="container">
+      <div class="section-head center">
+        <div class="kicker">Investment Architecture</div>
+        <h2>Choose the Growth System Built for Your Stage</h2>
+        <p>Transparent pricing. No long-term lock-ins. Performance-driven monthly retainers.</p>
+      </div>
+
+      <div class="pricing-grid">
+        
+        <!-- PLAN 1: FOUNDATION -->
+        <div class="price-card">
+          <div class="price-tag">Foundation</div>
+          <h3>Foundation</h3>
+          <div class="price-amount">$1,500</div>
+          <div class="price-period">One-time setup</div>
+          <ul class="price-features">
+            <li>Complete account &amp; campaign audit</li>
+            <li>Pixel &amp; CAPI server tracking setup</li>
+            <li>Audience &amp; competitor research</li>
+            <li>Funnel architecture &amp; budget strategy</li>
+            <li>Initial campaign structure launch</li>
+          </ul>
+          <a class="btn btn-outline" href="https://synergymedia-ads.zohobookings.com/synergymedia-ads" target="_blank" rel="noopener">Discuss Setup</a>
+        </div>
+
+        <!-- PLAN 2: GROWTH (FEATURED) -->
+        <div class="price-card featured">
+          <div class="price-tag">Most Popular</div>
+          <h3>Growth</h3>
+          <div class="price-amount">$2,500</div>
+          <div class="price-period">Per month</div>
+          <ul class="price-features">
+            <li>Everything in Foundation</li>
+            <li>Full campaign creation &amp; management</li>
+            <li>Ongoing optimization &amp; scaling</li>
+            <li>Creative consultation &amp; A/B testing</li>
+            <li>Performance reporting &amp; live dashboard</li>
+            <li>Sales forecasting &amp; weekly Loom updates</li>
+          </ul>
+          <a class="btn btn-red" href="https://synergymedia-ads.zohobookings.com/synergymedia-ads" target="_blank" rel="noopener">Scale Now 🚀</a>
+        </div>
+
+        <!-- PLAN 3: SCALE -->
+        <div class="price-card">
+          <div class="price-tag">Scale</div>
+          <h3>Scale</h3>
+          <div class="price-amount">$4,000</div>
+          <div class="price-period">Per month</div>
+          <ul class="price-features">
+            <li>Everything in Growth</li>
+            <li>Advanced CBO scaling framework</li>
+            <li>Aggressive creative testing strategy</li>
+            <li>Full-funnel conversion rate optimization</li>
+            <li>Sales forecasting &amp; growth planning</li>
+            <li>Priority 24/7 Zoho Cliq Support</li>
+          </ul>
+          <a class="btn btn-outline" href="https://synergymedia-ads.zohobookings.com/synergymedia-ads" target="_blank" rel="noopener">Discuss Scaling</a>
+        </div>
+
+        <!-- PLAN 4: ENTERPRISE -->
+        <div class="price-card custom-tier">
+          <div class="price-tag">Enterprise</div>
+          <h3>Custom</h3>
+          <div class="price-amount">Tailored</div>
+          <div class="price-period">Custom scope</div>
+          <ul class="price-features">
+            <li>Everything in Scale</li>
+            <li>High-spend account management ($25k+/mo)</li>
+            <li>Multi-market international campaign strategy</li>
+            <li>Advanced reporting &amp; server attribution</li>
+            <li>Dedicated lead growth strategist</li>
+            <li>Custom scope &amp; performance incentives</li>
+          </ul>
+          <a class="btn btn-dark" href="https://synergymedia-ads.zohobookings.com/synergymedia-ads" target="_blank" rel="noopener" style="background:#0B1524;">Contact Us</a>
+        </div>
+
+      </div>
+
+      <p class="price-disclaimer">
+        *Advertising spend is paid directly to Meta platforms and is separate from Synergy Media-Ads management fees.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq" style="background:#FFFFFF; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+    <div class="container">
+      <div class="section-head center">
+        <div class="kicker">FAQ</div>
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything you need to know before joining the Synergy partner network.</p>
+      </div>
+
+      <div class="faq-grid">
+        <details class="faq-item">
+          <summary>What is the minimum monthly Meta ad spend required?</summary>
+          <p>Our growth retainers work best for brands investing at least $2,000/month in Meta ad spend. For brands launching from scratch, our Foundation ($1,500 One-Time) tier sets up tracking and initial testing structures properly.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do you create the video and static ad creatives?</summary>
+          <p>Yes. On our Growth and Scale retainers, we provide creative briefs, scriptwriting, hook testing formulas, and editing guidance. You provide raw product clips or UGC, and our team engineers them into high-converting Meta ads.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Are there long-term contracts?</summary>
+          <p>No. All our monthly retainers operate on rolling 30-day agreements. We believe in earning your business month after month through measurable ROAS and transparent weekly communication.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How does your ad account unban &amp; protection work?</summary>
+          <p>We audit your Business Manager, verify business identities, align campaigns strictly with Meta’s Advertising Policies, and submit direct compliance escalations if restrictions occur.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BOOKING SECTION -->
+  <section id="book">
+    <div class="container">
+      <div class="cta-block">
+        <div>
+          <div class="kicker" style="background:rgba(255,255,255,0.1); color:#FF8F9A;">Next Step</div>
+          <h2>Let's Build Your Growth Engine.</h2>
+          <p>Book a private 30-minute growth audit. We'll examine your current Meta Ad account, dissect your competitor angles, and map out a tailored 90-day scaling roadmap.</p>
+          <div style="margin-top: 24px; font-size: 13px; color: #CBD5E1;">
+            ✓ 100% Free · No sales pressure · Direct founder consultation
+          </div>
+        </div>
+        <div class="cta-form-box">
+          <h4>Reserve Your Audit Session</h4>
+          <p>Select your local timezone and pick a slot directly on our live calendar.</p>
+          <a class="btn btn-red" href="https://synergymedia-ads.zohobookings.com/synergymedia-ads" target="_blank" rel="noopener" style="width:100%; padding:16px;">
+            Schedule 30-Min Audit 🚀
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <strong style="color:#FFF; font-size:16px; letter-spacing:0.5px;">SYNERGY MEDIA-ADS</strong>
+          <p style="color:#94A3B8; margin-top:4px; font-size:12px;">E-Commerce Revenue Acceleration via Meta Ads</p>
+          
+          <div class="social-links">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener"><span>🌐 Facebook</span></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener"><span>📸 Instagram</span></a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener"><span>💼 LinkedIn</span></a>
+          </div>
+        </div>
+        <ul class="footer-links">
+          <li><a href="#proof">Proof</a></li>
+          <li><a href="#system">The System</a></li>
+          <li><a href="#services">Capabilities</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="javascript:void(0)" onclick="openModal('privacyModal'); return false;">Privacy Policy</a></li>
+          <li><a href="javascript:void(0)" onclick="openModal('termsModal'); return false;">Terms of Service</a></li>
+          <li><a href="javascript:void(0)" onclick="openModal('cookieModal'); return false;">Cookie Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Synergy Media-Ads. All rights reserved.</div>
+        <div class="footer-address">Contact: info@synergymedia-ads.com · 340 S Lemon Ave #4133, Walnut, CA 91789, USA</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODALS -->
+  <div class="modal" id="privacyModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('privacyModal')">✕</button>
+      <h3>PRIVACY POLICY — SYNERGY MEDIA-ADS</h3>
+      <p><b>Last Updated:</b> August 2026</p>
+      <h4>1. INTRODUCTION</h4>
+      <p>Synergy Media-Ads ("we," "our," or "us") respects your privacy and is committed to protecting the personal information you share with us through our website (www.synergymedia-ads.com).</p>
+      <h4>2. INFORMATION WE COLLECT</h4>
+      <p>We collect personal information that you voluntarily provide to us when applying for an audit or contacting us. This includes: Full Name, Work Email Address, Website URL, and Monthly Ad Spend details.</p>
+      <h4>3. HOW WE USE YOUR INFORMATION</h4>
+      <p>We use the collected information solely to review your business eligibility for our Meta Ads Growth Audit, send personalized video audits, communication, proposals, and manage client marketing services. We do NOT sell, rent, or trade your personal information to third parties.</p>
+      <h4>4. COOKIES &amp; TRACKING</h4>
+      <p>Our website uses standard cookies and analytics tools (such as Google Analytics and Meta Pixel) to analyze site traffic and improve user experience. You can disable cookies in your browser settings at any time.</p>
+      <h4>5. DATA SECURITY</h4>
+      <p>We implement industry-standard security measures (including SSL encryption and secure cloud storage) to protect your personal information against unauthorized access or disclosure.</p>
+      <h4>6. YOUR RIGHTS</h4>
+      <p>You have the right to request access to, correction of, or deletion of your personal data at any time. To exercise these rights, please contact us at info@synergymedia-ads.com.</p>
+      <h4>7. CONTACT US</h4>
+      <p>If you have any questions regarding this Privacy Policy, please contact us at: info@synergymedia-ads.com · www.synergymedia-ads.com</p>
+    </div>
+  </div>
+
+  <div class="modal" id="termsModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('termsModal')">✕</button>
+      <h3>TERMS OF SERVICE — SYNERGY MEDIA-ADS</h3>
+      <p><b>Last Updated:</b> August 2026</p>
+      <h4>1. ACCEPTANCE OF TERMS</h4>
+      <p>By accessing and using www.synergymedia-ads.com (the "Website"), you agree to comply with and be bound by these Terms of Service. If you do not agree to these terms, please do not use our Website.</p>
+      <h4>2. SERVICES OFFERED</h4>
+      <p>Synergy Media-Ads provides digital marketing services, including Meta Ads management, creative strategy, and e-commerce growth consulting. All services provided to paying clients are governed by a separate Master Service Agreement (MSA) and Statement of Work (SOW).</p>
+      <h4>3. INTELLECTUAL PROPERTY</h4>
+      <p>All content on this Website—including text, graphics, logos, images, and software—is the property of Synergy Media-Ads and is protected by international copyright laws. You may not reproduce, distribute, or use any content from this site without our express written permission.</p>
+      <h4>4. LIMITATION OF LIABILITY</h4>
+      <p>Synergy Media-Ads shall not be liable for any direct, indirect, incidental, or consequential damages resulting from the use of or inability to use our Website or free audit resources.</p>
+      <h4>5. EXTERNAL LINKS</h4>
+      <p>Our Website may contain links to third-party websites or tools (such as Zoho Bookings or social media platforms). We assume no responsibility for the content or privacy practices of those external sites.</p>
+      <h4>6. CONTACT INFORMATION</h4>
+      <p>If you have any questions about these Terms of Service, please contact us at: info@synergymedia-ads.com · www.synergymedia-ads.com</p>
+    </div>
+  </div>
+
+  <div class="modal" id="cookieModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('cookieModal')">✕</button>
+      <h3>COOKIE POLICY — SYNERGY MEDIA-ADS</h3>
+      <p><b>Last Updated:</b> August 2026</p>
+      <h4>1. WHAT ARE COOKIES?</h4>
+      <p>Cookies are small data files placed on your computer or mobile device when you visit our website. They are widely used to make websites work efficiently and provide reporting insights.</p>
+      <h4>2. HOW WE USE COOKIES</h4>
+      <p>We use essential cookies for website operation and analytics cookies (such as Meta Pixel and Google Analytics) to understand visitor engagement, traffic sources, and audit form interactions.</p>
+      <h4>3. MANAGING PREFERENCES</h4>
+      <p>You can choose to disable non-essential cookies via your browser settings at any time without affecting your ability to schedule a strategy session.</p>
+    </div>
+  </div>
+
+  <div class="cookie-banner" id="cookieBanner">
+    <p>We use cookies and analytics tools to optimize your experience and evaluate ad performance. Read our <a href="javascript:void(0)" onclick="openModal('cookieModal'); return false;" style="color:var(--red); font-weight:700; text-decoration:underline;">Cookie Policy</a>.</p>
+    <button onclick="acceptCookies()">Accept</button>
+  </div>
+
+  <script>
+    function openModal(id) {
+      var targetModal = document.getElementById(id);
+      if (targetModal) {
+        targetModal.style.display = 'flex';
+        targetModal.classList.add('active');
+      }
+    }
+    function closeModal(id) {
+      var targetModal = document.getElementById(id);
+      if (targetModal) {
+        targetModal.style.display = 'none';
+        targetModal.classList.remove('active');
+      }
+    }
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+        event.target.classList.remove('active');
+      }
+    }
+    function acceptCookies() {
+      document.getElementById('cookieBanner').style.display = 'none';
+      localStorage.setItem('synergyCookiesAccepted', 'true');
+    }
+    if (localStorage.getItem('synergyCookiesAccepted') !== 'true') {
+      document.getElementById('cookieBanner').style.display = 'flex';
+    }
+  </script>
+</body>
+</html>
